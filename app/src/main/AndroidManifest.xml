@@ -12,9 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/MoshiMoshi">
 
-    <!--android:theme="@style/Theme.AppCompat.Light.NoActionBar">-->
+        <!--android:theme="@style/AppTheme">-->
+        <!--android:theme="@style/Theme.AppCompat.Light.NoActionBar">-->
 
-    <!--android:theme="@style/AppTheme"-->
+
+
 
         <activity
             android:name=".MainActivity"

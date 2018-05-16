@@ -1,11 +1,10 @@
 package com.aojedacs.moshi_wv;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -59,27 +58,24 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
-
-
     }
 
 
     @Override
     public void onBackPressed() {
-        if(webView.canGoBack()){
+        if (webView.canGoBack()) {
             webView.goBack();
-        }else{
+        } else {
             super.onBackPressed();
         }
     }
 
-    private void internetPermissions(){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+    private void internetPermissions() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             int hasInternetPermission = checkSelfPermission(Manifest.permission.INTERNET);
 
-            if(hasInternetPermission != PackageManager.PERMISSION_GRANTED){
-                requestPermissions(new String[]{Manifest.permission.INTERNET},REQUEST_CODE_PERMISSIONS);
+            if (hasInternetPermission != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{Manifest.permission.INTERNET}, REQUEST_CODE_PERMISSIONS);
             }
         }
 
